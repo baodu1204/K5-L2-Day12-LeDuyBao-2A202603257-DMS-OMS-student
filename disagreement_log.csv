@@ -1,0 +1,10 @@
+﻿image,label,field,issue,mine,peer,verdict,guideline_rule,action
+D01.png,face13,mouth_left.outside,khác cờ,0,1,mine,4.6,Giữ mine; peer để mouth_left.outside=1 là sai vì điểm của mine nằm đúng tại khóe miệng.
+D01.png,face13,lip_lower.outside,khác cờ,1,0,peer,4.6,Sửa mine: đặt lip_lower tại mép môi dưới và bỏ outside.
+D02.png,face,gaze_zone,khác giá trị (IoU=0.73),road,mirror_c,ambiguous,4.5,Mở lại D02 cùng bạn để xác nhận hướng mắt và đầu.
+D03.png,face,gaze_zone,khác giá trị (IoU=0.73),road,mirror_c,ambiguous,4.5,Mở lại D03 cùng bạn để xác nhận hướng mắt và đầu.
+D04.png,face,gaze_zone,khác giá trị (IoU=0.62),road,mirror_c,ambiguous,4.5,Mở lại D04 cùng bạn để xác nhận hướng mắt và đầu.
+D05.png,face,gaze_zone,khác giá trị (IoU=0.80),road,mirror_c,ambiguous,4.5,Mở lại D05 cùng bạn để xác nhận hướng mắt và đầu.
+S01_rgb.png,child_seat,occupied,khác giá trị (IoU=0.95),no,yes,mine,4.8,Giữ mine: ghế trẻ em trống dùng occupied=no; peer đổi yes sang no.
+S02_ir.png,person,seatbelt,khác giá trị (IoU=0.98),unknown,not_worn,peer,4.7,Sửa mine thành seatbelt=not_worn nếu rõ không có dây an toàn trên ảnh.
+S04_rgb.png,frame_meta,modality,khác giá trị,rgb,ir,mine,4.3,Giữ mine: S04_rgb.png bắt buộc modality=rgb; peer đổi ir sang rgb.
