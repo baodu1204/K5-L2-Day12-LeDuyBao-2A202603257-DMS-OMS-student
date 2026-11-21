@@ -1,3 +1,8 @@
-frame_id,source,phenomenon,affected_field,effect_on_label
-S01_ir,IR_sim,"(ví dụ) không thấy dây an toàn trên áo tối",seatbelt,"giữ unknown; RGB cùng cảnh cũng không thấy"
-D03,real_IR,"(ví dụ) đốm phản xạ LED trên tròng kính che mắt phải",right_eye_state,"ghi unknown, không ghi closed"
+frame_id,source,scene,attribute,visible_in_rgb,visible_in_ir_sim,reason
+S01_ir,IR_sim,"S01: hai ghế trẻ em, một túi và người lớn","child_seat/infant_seat/object/person","Có","Có","IR-sim vẫn giữ được hình khối ghế, túi và bố cục người; độ tương phản của vật sáng tối rõ hơn ít theo sắc xanh-xám."
+S02_ir,IR_sim,"S02: người lớn ở ghế trái xe và ghế em bé ở ghế phải xe","person/face/infant_seat","Có","Có","Người và nôi xách vẫn nhận ra qua hình dạng; các chi tiết nhỏ của mặt ở IR-sim ít rõ nên thuộc tính mặt giữ unknown thay vì suy đoán."
+S03_ir,IR_sim,"S03: người lớn ở ghế trái xe, ghế em bé ở ghế phải xe","person/face/infant_seat","Có","Có","Cả hai vật vẫn hiện trong IR-sim, nhưng ánh sáng tối làm chi tiết khuôn mặt và dây an toàn kém rõ."
+S04_ir,IR_sim,"S04: người lớn ở ghế bên phải xe và ghế trẻ em ở ghế bên trái xe","person/child_seat/seatbelt","Có","Có","Ghế và người vẫn phân biệt được; dây an toàn chìm trong bóng tối, nên không ghi worn_correct/worn_incorrect mà dùng unknown hoặc not_worn nếu thấy rõ ràng không có dây."
+S05_ir,IR_sim,"S05: tài xế mô phỏng ở ghế trước hoặc người trong buồng lái","face/glasses/hand","Có","Có","Ánh sáng cửa sổ tạo vùng sáng mạnh và bóng tối; hình mặt, tay vẫn nhận được nhưng chi tiết tròng kính có thể bị che/giảm độ tương phản."
+D01,real_IR,"D01: tài xế NIR với một tay đưa gần mặt","face/eye_left/eye_right/hand","Không có RGB cặp","Không áp dụng IR-sim","Ảnh NIR thật cho thấy mặt và tay bằng độ sáng; nếu chi tiết mắt bị che bởi bóng hoặc phản xạ thì ghi unknown thay vì closed."
+D04,real_IR,"D04: tài xế NIR cầm điện thoại gần mặt","phone/hand/glasses","Không có RGB cặp","Không áp dụng IR-sim","Điện thoại có thể nhận theo cạnh và vị trí trong tay; không đổi sang RGB và không dùng quy tắc IR-sim để suy đoán chi tiết mắt."
